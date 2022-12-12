@@ -25,9 +25,8 @@ export class form73Component implements OnInit, OnChanges {
 
             "request": {
                 },
-            "keyword": {
-                "value": this.ngModel15
-                }
+            "keyword":  this.ngModel15
+                
         }
         this.onMessage.emit(message);
     }
