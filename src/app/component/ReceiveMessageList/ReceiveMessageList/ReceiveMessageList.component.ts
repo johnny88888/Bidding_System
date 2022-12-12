@@ -24,7 +24,7 @@ export class ReceiveMessageListComponent implements OnInit {
     static parameter_UID = "";
     parameter_UID;
 
-    ngModel20: any = "";
+    ngModel17: any = "";
 
     private passingParam:any | null = null;
 
@@ -63,9 +63,9 @@ export class ReceiveMessageListComponent implements OnInit {
                         console.log("invoke success");
                         service.invokeStatus.next(true);
                         if (getMessageListHasRtnMsgProperty){
-                            this.ngModel20 = getMessageListParsedJSON.rtnMsg;
+                            this.ngModel17 = getMessageListParsedJSON.rtnMsg;
                         }else {
-                            this.ngModel20 = getMessageListParsedJSON;
+                            this.ngModel17 = getMessageListParsedJSON;
                         }
                     }else if (getMessageListData.toString().search(error) > 0 && getMessageListData.toString().search(notFound) > 0) {
                         console.log("invoke fail, get error and not found message");
@@ -80,9 +80,9 @@ export class ReceiveMessageListComponent implements OnInit {
                         console.log("invoke success");
                         service.invokeStatus.next(true);
                         if (getMessageListHasRtnMsgProperty){
-                            this.ngModel20 = getMessageListParsedJSON.rtnMsg;
+                            this.ngModel17 = getMessageListParsedJSON.rtnMsg;
                         }else {
-                            this.ngModel20 = getMessageListParsedJSON;
+                            this.ngModel17 = getMessageListParsedJSON;
                         }
                     }
                 break;

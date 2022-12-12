@@ -32,7 +32,7 @@ export class form49Component implements OnInit, OnChanges {
         this.onMessage.emit(message);
     }
 
-    @Input() ngModel18: any = "";
+    @Input() ngModel23: any = "";
 
 
     constructor(private navigationService: NavigationService , public dialog: MatDialog) {}
