@@ -20,7 +20,7 @@ export class table96Component implements OnInit, OnChanges {
     @ViewChild('filter') filter: ElementRef;
     @Output() onMessage = new EventEmitter<{}>();
     
-    @Input() ngModel21: any = "";
+    @Input() ngModel18: any = "";
     dataSource = new MatTableDataSource();
     obs: Observable<any>;
 
@@ -36,7 +36,7 @@ export class table96Component implements OnInit, OnChanges {
 
 
     ngOnChanges(changes){
-        this.dataSource.data = this.ngModel21;
+        this.dataSource.data = this.ngModel18;
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
         this.obs = this.dataSource.connect();
