@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     serviceReadySubscription: Subscription;
     // for store last time information
 
-    ngModel17: any = "";
+    ngModel22: any = "";
 
 
 
@@ -55,9 +55,9 @@ export class LoginComponent implements OnInit {
                         console.log("invoke success");
                         service.invokeStatus.next(true);
                         if (loginHasRtnMsgProperty){
-                            this.ngModel17 = loginParsedJSON.rtnMsg;
+                            this.ngModel22 = loginParsedJSON.rtnMsg;
                         }else {
-                            this.ngModel17 = loginParsedJSON;
+                            this.ngModel22 = loginParsedJSON;
                         }
                     }else if (loginData.toString().search(error) > 0 && loginData.toString().search(notFound) > 0) {
                         console.log("invoke fail, get error and not found message");
@@ -72,9 +72,9 @@ export class LoginComponent implements OnInit {
                         console.log("invoke success");
                         service.invokeStatus.next(true);
                         if (loginHasRtnMsgProperty){
-                            this.ngModel17 = loginParsedJSON.rtnMsg;
+                            this.ngModel22 = loginParsedJSON.rtnMsg;
                         }else {
-                            this.ngModel17 = loginParsedJSON;
+                            this.ngModel22 = loginParsedJSON;
                         }
                     }
                     this.navigate('Main', {UID: loginParsedJSON.userId}, service.invokeStatus);
