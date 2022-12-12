@@ -1,17 +1,24 @@
 <form class="border"
       style= "position: absolute;
-              width: 250px;
-              height: 220px;
-              left: 358.8px;
-              top: 189.3px;
+      position: absolute;
+      width: 429px;
+      height: 448px;
+      left: 340px;
+      top: 50px;
+      padding: 10px;
               background-color: #ffffff;
               border-color: transparent;
               border-style: solid;
               opacity: 1;">
+        <div style="text-align:left; padding-left: 34px">
+                <br>
+                <h2><b>Login</b></h2>
+        </div>
+
       <app-input50 [(ngModel)]= "ngModel13" name= "ngModel13"></app-input50>
       <app-input51 [(ngModel)]= "ngModel14" name= "ngModel14"></app-input51>
       <app-button52  (click)= "handleClick($event);"
                         ></app-button52>
-      <app-button53  (click)= "  return"
+      <app-button53  (click)= " navigate('Registration', null, null); return"
                         ></app-button53>
 </form>

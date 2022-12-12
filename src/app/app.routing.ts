@@ -61,8 +61,8 @@ export const routes: Routes = [
         component: DefaultLayoutComponent,
         children:[
             {
-                path: 'Login',
-                component:LoginComponent,
+                path: 'ReceiveMessageList',
+                component:ReceiveMessageListComponent,
                 children:[
                 ]
             },
@@ -73,32 +73,32 @@ export const routes: Routes = [
                 ]
             },
             {
-                path: 'Main',
-                component:MainComponent,
-                children:[
-                ]
-            },
-            {
-                path: 'ReceiveMessageList',
-                component:ReceiveMessageListComponent,
-                children:[
-                ]
-            },
-            {
                 path: 'Registration',
                 component:RegistrationComponent,
                 children:[
                 ]
             },
             {
-                path: 'ItemDetail',
-                component:ItemDetailComponent,
+                path: 'LaunchItem',
+                component:LaunchItemComponent,
                 children:[
                 ]
             },
             {
-                path: 'LaunchItem',
-                component:LaunchItemComponent,
+                path: 'Login',
+                component:LoginComponent,
+                children:[
+                ]
+            },
+            {
+                path: 'Main',
+                component:MainComponent,
+                children:[
+                ]
+            },
+            {
+                path: 'ItemDetail',
+                component:ItemDetailComponent,
                 children:[
                 ]
             },
