@@ -1,0 +1,34 @@
+<table mat-table [dataSource]= "dataSource" matSort
+       class= "mat-elevation-z8"
+       data-cy= "table96"
+       style= "width: 100%;
+               border-color: transparent;
+               opacity: 1;
+               border-style: none;
+               margin-bottom: 5px;
+               margin-right: 5px;">
+    <ng-container matColumnDef= "id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef= "let element" (click)= " return">
+            {{ evaluateValue(element, "id") }}
+        </td>
+    </ng-container>
+    <ng-container matColumnDef= "senderUsername">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Sender </th>
+        <td mat-cell *matCellDef= "let element" (click)= " return">
+            {{ evaluateValue(element, "senderUsername") }}
+        </td>
+    </ng-container>
+    <ng-container matColumnDef= "title">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
+        <td mat-cell *matCellDef= "let element" (click)= " return">
+            {{ evaluateValue(element, "title") }}
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef= "['id', 'senderUsername', 'title']"></tr>
+    <tr mat-row *matRowDef= "let row; columns: ['id', 'senderUsername', 'title'];"></tr>
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]"
+               showFirstLastButtons
+               aria-label="Select page of periodic elements">
+</mat-paginator>

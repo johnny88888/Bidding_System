@@ -1,0 +1,71 @@
+<app-header
+  [navbarBrandRouterLink]="['/dashboard']"
+  [fixed]="true"
+  [navbarBrandFull]="{src: 'assets/img/brand/selab5.svg', width: 89, height: 25, alt: 'Selab Logo'}"
+  [navbarBrandMinimized]="{src: 'assets/img/brand/selab5.svg', width: 30, height: 30, alt: 'Selab Logo'}"
+  [sidebarToggler]="'lg'"
+  [asideMenuToggler]="'lg'">
+  <ul class="nav navbar-nav d-md-down-none">
+    <li class="nav-item px-3">
+      <a class="nav-link" href="#">Users</a>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav ml-auto">
+    <!--li class="nav-item d-md-down-none">
+      <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
+    </li-->
+<!--    <li class="nav-item d-md-down-none">-->
+<!--      <a class="nav-link" href="#"><i class="icon-list"></i></a>-->
+<!--    </li>-->
+<!--    <li class="nav-item d-md-down-none">-->
+<!--      <a class="nav-link" href="#"><i class="icon-location-pin"></i></a>-->
+<!--    </li>-->
+  </ul>
+</app-header>
+<div class="app-body" style="background: white">
+  <app-selabsidebar></app-selabsidebar>
+  <!-- <app-sidebar #appSidebar [fixed]="true" [display]="'lg'" [minimized]="sidebarMinimized" (minimizedChange)="toggleMinimize($event)">
+    <app-sidebar-nav [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+    <app-sidebar-minimizer></app-sidebar-minimizer>
+  </app-sidebar> -->
+  <!-- Main content -->
+  <main class="main" style="background: white">
+    <!-- Breadcrumb -->
+    <!-- breaking change 'cui-breadcrumb' -->
+    <cui-breadcrumb>
+      <!-- Breadcrumb Menu-->
+      <li class="breadcrumb-menu d-md-down-none">
+        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+          <a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>
+        </div>
+      </li>
+    </cui-breadcrumb>
+    <!-- deprecation warning for 'app-breadcrumb' -->
+    <!--<ol class="breadcrumb">-->
+      <!--<app-breadcrumb></app-breadcrumb>-->
+      <!--&lt;!&ndash; Breadcrumb Menu&ndash;&gt;-->
+      <!--<li class="breadcrumb-menu d-md-down-none">-->
+        <!--<div class="btn-group" role="group" aria-label="Button group with nested dropdown">-->
+          <!--<a class="btn" href="#"><i class="icon-speech"></i></a>-->
+          <!--<a class="btn" [routerLink]="['/dashboard']"><i class="icon-graph"></i> &nbsp;Dashboard</a>-->
+          <!--<a class="btn" href="#"><i class="icon-settings"></i> &nbsp;Settings</a>-->
+        <!--</div>-->
+      <!--</li>-->
+    <!--</ol>-->
+    <!-- important
+    this container div is the anchor point of it's child component ,
+    so it should be "postition: relative"
+    -->
+    <div class="container-fluid" style="position: relative;">
+      <router-outlet></router-outlet>
+    </div><!-- /.container-fluid -->
+  </main>
+  <app-asidebar></app-asidebar>
+<!--  <app-aside [fixed]="true" [display]="false" [ngClass]="'test'">-->
+<!--    <tabset></tabset>-->
+<!--  </app-aside>-->
+</div>
+<app-footer>
+  <span><a href="https://coreui.io"></a> &copy; 2020 SELabs.</span>
+</app-footer>
+

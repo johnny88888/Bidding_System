@@ -1,0 +1,27 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "integrationFolder": ".",
+  "testFiles": ["src/test/cypress/integration/**/*.spec.ts", "**/*.spec.ts"],
+  "ignoreTestFiles": ["**/node_modules/**/*.spec.ts", "app.component.spec.ts"],
+  "reporter": "cypress-mochawesome-reporter",
+  "reporterOptions": {
+    "reportDir": "src/test/cypress/results",
+    "chart":true,
+    "overwrite": true,
+    "html": false,
+    "json": true,
+    "embeddedScreenshots": true,
+    "inlineAssets": true
+  },
+  "video": false,
+  "screenshotsFolder": "src/test/cypress/screenshots",
+  "supportFile": "src/test/cypress/support/index.ts",
+  "pluginsFile": "src/test/cypress/plugins/index.ts",
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "retries": {
+    "runMode": 2,
+    "openMode": 1
+  },
+  "experimentalStudio": true
+}
